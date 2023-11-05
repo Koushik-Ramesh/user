@@ -1,20 +1,20 @@
 pipeline {
-    agent any 
+    agent any
     stages {
-        stage('Lint Checks') {
+        stage('lint checks') {
             steps {
                 sh "echo Installing JSlist"
                 sh "npm i jslint"
-                sh "echo Starting linkchecks ....."
+                sh "echo Starting lintchecks..."
                 sh "node_modules/jslint/bin/jslint.js server.js || true"
-                sh "echo Lintchecks completed..."
+                sh "echo lintchecks completed...."
             }
         }
-        stage('Generating Artifacts') {
+        stage("Generating Artifacts") {
             steps {
                 sh "echo Generating Artifacts"
                 sh "npm install"
             }
-        }
-    }
+        }
+    }
 }
