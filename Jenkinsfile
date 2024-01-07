@@ -2,4 +2,5 @@
 
 
 env.Component="user"
+env.APPTYPE="nodejs"
 nodejs()
