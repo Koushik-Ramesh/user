@@ -247,7 +247,7 @@ if (process.env.MONGO == 'true') {
 // set up Mongo
 function mongoConnect() {
     return new Promise((resolve, reject) => {
-        var mongoURL = process.env.MONGO_URL || 'mongodb://mongodb:27017/users'
+        var mongoURL = process.env.MONGO_URL || 'mongodb://mongodb:27017/users';
         mongoClient.connect(mongoURL, (error, client) => {
             if(error) {
                 reject(error);
@@ -265,7 +265,7 @@ function mongoConnect() {
 if (process.env.DOCUMENTDB == 'true') {
 function mongoConnect() {
     return new Promise((resolve, reject) => {
-    var mongoURL = process.env.MONGO_URL || 'mongodb://username:password@mongodb:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
+    var mongoURL = process.env.MONGO_URL || 'mongodb://username:password@mongodb:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false';
     var client = mongoClient.connect(mongoURL,
       {
         // Mutable & Immutable
