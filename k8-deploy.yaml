@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: user
-        image: 751732450123.dkr.ecr.us-east-1.amazonaws.com/user:503
+        image: 751732450123.dkr.ecr.us-east-1.amazonaws.com/user:{{APP_VERSION}}
         ports:
         - containerPort: 8080
         envFrom:
